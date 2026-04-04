@@ -186,7 +186,7 @@ export default function App() {
             <div className="w-10 h-10 bg-slate-900 rounded-2xl flex items-center justify-center text-white shadow-xl shadow-slate-200">
               <IconFlame />
             </div>
-            <span className="font-black text-2xl tracking-tighter uppercase italic">Axon<span className="text-blue-600">.</span></span>
+            <span className="font-black text-2xl tracking-tighter uppercase italic">DibyaFit<span className="text-blue-600">.</span></span>
           </div>
           <div className="bg-slate-50 border border-slate-200/60 rounded-2xl px-4 py-2 flex items-center gap-2">
             <div className="w-2 h-2 rounded-full bg-orange-500 animate-pulse" />
