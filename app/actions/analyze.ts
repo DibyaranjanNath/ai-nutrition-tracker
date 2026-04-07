@@ -17,7 +17,7 @@ export async function analyzeMeal(formData: FormData) {
   const bytes = await file.arrayBuffer();
   const base64Image = Buffer.from(bytes).toString("base64");
 
-  const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
+  const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash-lite" });
 
   const prompt = `
     Analyze this food image. 
