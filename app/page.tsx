@@ -194,9 +194,12 @@ export default function App() {
           </div>
         </div>
       </nav>
-
       <main className="max-w-xl mx-auto px-6 py-8 space-y-10">
-        
+         {/* User-Friendly Greeting */}
+        <div className="space-y-1">
+          <h4 className="text-3xl font-black tracking-tighter">Calculate Your Nutrition</h4>
+          <p className="text-slate-400 font-medium text-sm tracking-tight italic">Snap a photo of your meal to instantly calculate protein, carbs, fats, and calories.</p>
+        </div>
         {/* Track Mode Switcher */}
         <div className="flex bg-slate-100/80 p-1.5 rounded-[1.25rem] border border-slate-200/50">
           <button 
@@ -209,7 +212,7 @@ export default function App() {
             onClick={() => { setTrackMode('day'); setError(null); }}
             className={`flex-1 py-2.5 text-[10px] font-bold uppercase tracking-widest rounded-xl transition-all duration-300 ${trackMode === 'day' ? 'bg-white shadow-sm text-slate-900 ring-1 ring-slate-200' : 'text-slate-400 hover:text-slate-600'}`}
           >
-            Track Daily Fuel
+            Track Daily Eats
           </button>
         </div>
 
@@ -252,7 +255,7 @@ export default function App() {
           <div className="space-y-6">
             <div className="flex items-center justify-between px-2">
               <h3 className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">
-                {trackMode === 'meal' ? 'Live Analysis' : 'Fuel Timeline'}
+                {trackMode === 'meal' ? 'Nutrition Analysis' : 'Nutrition Analysis & Insights'}
               </h3>
               {trackMode === 'day' && (
                 <button onClick={() => confirm("Clear today's logs?") && setMeals([])} className="text-[10px] font-black text-red-400 hover:text-red-500 uppercase tracking-widest transition-colors">Clear All</button>
@@ -350,7 +353,7 @@ export default function App() {
             {loading ? (
               <div className="flex items-center gap-3">
                 <div className="w-5 h-5 border-[3px] border-slate-900 border-t-transparent rounded-full animate-spin" />
-                <span className="text-[11px] font-black uppercase tracking-[0.2em] text-slate-900">Neural Syncing...</span>
+                <span className="text-[11px] font-black uppercase tracking-[0.2em] text-slate-900">Scanning...</span>
               </div>
             ) : (
               <div className="flex items-center gap-4">
@@ -359,7 +362,7 @@ export default function App() {
                 </div>
                 <div className="text-left">
                   <p className="font-black text-sm tracking-tight leading-none mb-1 text-slate-900 uppercase tracking-widest">
-                    {trackMode === 'meal' ? 'New Scan' : 'Log Entry'}
+                    {trackMode === 'meal' ? 'UPLOAD & TRACK' : 'UPLOAD & TRACK'}
                   </p>
                   <p className="text-[9px] font-bold text-slate-400 uppercase tracking-[0.2em]">Vision v2.5 Active</p>
                 </div>
