@@ -115,7 +115,7 @@ export default function App() {
   const analyzeImage = async (base64: string, type: string, retries = 5, delay = 1000): Promise<any> => {
     const apiKey = await getApiKey();
     const genAI = new GoogleGenerativeAI(apiKey);
-    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash-lite" });
     
     const prompt = `Analyze this food image and provide nutritional estimates. 
     Return ONLY a JSON object with these exact keys:
